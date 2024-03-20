@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #0e4c2e;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden !important;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+h,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+/* toggle switcher */
+/* Custom styling for the toggle switch */
+.toggle-switch {
+  position: relative;
+  width: 3rem;
+  height: 1.5rem;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-switch-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+  /* background-color: #ddd; */
+  background-color: #ddd;
+  border-radius: 1.5rem;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.toggle-switch-dot {
+  position: absolute;
+  top: 0.25rem;
+  left: 0.25rem;
+  width: 1rem;
+  height: 1rem;
+  background-color: #acacac;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Style for the active state */
+.toggle-switch input:checked + .toggle-switch-label {
+  background-color: #dafbee; /* Green */
+}
+
+.toggle-switch input:checked + .toggle-switch-label .toggle-switch-dot {
+  transform: translateX(1.5rem);
+  background-color: #1da664;
+}
+
+.active {
+  background: #1da664;
+  color: #fff;
+}
+.active span,
+.active h2 {
+  color: #fff;
+}
+
+.active button {
+  background-color: #0e4c2e;
+  color: #fff;
+}
+
+/* progress bar */
+.progress {
+  position: relative;
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  background: #fff linear-gradient(to right, transparent 0%, #e8f6f0 0);
+}
+.progress::before {
+  content: "";
+  display: block;
+  height: 100%;
+  margin-left: 50%;
+  transform-origin: left;
+  border-radius: 0 100% 100% 0/50%;
+}
+.progress::after {
+  content: "";
+  position: absolute;
+  inset: 20px;
+  border-radius: 50%;
+  background: white;
+}
+.progress::before {
+  background: #1da664;
+  transform: rotate(calc(((85 - 50) * 0.01deg)));
+}
+
+li {
+  list-style: none;
+}
+
+.get-started svg path {
+  fill: white !important;
+}
+.get-started:hover svg path {
+  fill: #1da664 !important;
+}
+
+.auth-modal {
+  background: rgba(14, 76, 46, 0.3);
+  backdrop-filter: blur(5px);
+}
+
+.container-custom {
+  width: 1030px;
+  margin: auto;
+}
+
+/* responsive */
+@media only screen and (min-width: 1530px) and (max-width: 1580px) {
+  .container {
+    padding: 0 30px !important;
+  }
+}
+
+@media only screen and (min-width: 1280px) and (max-width: 1315px) {
+  .container {
+    padding: 0 30px !important;
+  }
+}
+
+@media only screen and (min-width: 1022px) and (max-width: 1070px) {
+  .container {
+    padding: 0 30px !important;
+  }
+}
+
+@media only screen and (min-width: 637px) and (max-width: 665px) {
+  .container {
+    padding: 0 30px !important;
+  }
+}
+
+@media only screen and (min-width: 1530px) and (max-width: 1580px) {
+  .container {
+    padding: 0 30px !important;
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 1124px) {
+  .container-custom {
+    width: 95%;
+  }
+}
